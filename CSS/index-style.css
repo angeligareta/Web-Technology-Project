@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #37ecba, #000000);
+  font-family: 'Lato';
+
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  position: absolute;
+  top: 0;
+  left: 10%;
+  bottom: 0;
+  right: 10%;
+}
+
+header {
+  color: white;
+  background-color: #333;
+  user-select: none;
+  position: fixed;
+  width: inherit; /* Because it's fixed, we can't put 100%*/
+  z-index: 10;
+}
+
+.invert { filter: invert(100%); }
+
+.title-div {
+  text-align: center;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+
+.page-title {
+  font-family: 'Oswald';
+  display: inline;
+  padding-left: 8px;
+}
+
+.navbar {
+  font-size: 17px;
+  border-top: 1px solid rgba(0, 255, 3, 0.5);
+  margin: 0px auto;
+  -webkit-padding-start: 0px;
+  /* Porque ul añade 40px de margen izquierdo */
+}
+
+.navbar-left {
+  float: left;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.navbar-left>li {
+  display: inline-block;
+  padding: 25px 40px;
+  border: 2px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.navbar-right>li {
+  display: inline-block;
+  padding: 25px 40px;
+  border: 2px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+.navbar-right>li:hover, .navbar-left>li:hover {
+  border: 2px solid rgba(0, 255, 3, 0.5);
+  border-top: 1px solid rgba(0, 255, 3, 0.5);
+  background-color: #282626;
+}
+
+.content {
+  background-color: white;
+  position: absolute;
+  top: 16%;
+  height: 77%;
+  width: 100%;
+}
+
+.login-menu {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.register-button {
+  display: inline;
+  text-align: center;
+  user-select: none;
+
+  margin: 75px;
+  padding: 25px 40px;
+
+  border: 3px solid rgb(53, 212, 74);
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.login-button {
+  display: inline;
+  text-align: center;
+  user-select: none;
+
+  margin: 75px;
+  padding: 25px 40px;
+
+  border: 3px solid rgb(53, 212, 74);
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.register-button:hover, .login-button:hover {
+  border: 3px solid rgb(0, 255, 34);
+  box-shadow: 0 0 25px rgb(0, 255, 34);
+}
+
+.login {
+  animation: login-entry 3s ease-in-out;
+  text-align: center;
+  opacity: 1 !important;
+  margin: 5% auto;
+
+  height: 240px;
+  width: 500px;
+
+  padding: 40px;
+  border: 5px solid rgb(53, 212, 74);
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.register {
+  animation: register-entry 3s ease-in-out;
+  text-align: center;
+  opacity: 1 !important;
+  margin: 6% auto 0 auto;
+
+  height: 400px;
+  width: 600px;
+
+  padding: 40px;
+  border: 5px solid rgb(53, 212, 74);
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.register > .course-selection {
+  animation: input-entry 3s ease-in-out;
+  background-color: white;
+  text-align: center;
+  border: 2px solid initial;
+  margin: auto;
+  padding: 8px;
+  width: 75%;
+}
+
+.register > .course-selection > h4 {
+  color: gray;
+  font: 400 13.3333px Arial;
+  padding-bottom: 5px;
+}
+
+.register > .course-selection > label {
+  font: 500 13.3333px Arial;
+  padding-right: 10px;
+}
+
+.login:hover, .register:hover {
+  border: 5px solid rgb(0, 255, 34);
+  box-shadow: 0 0 25px rgb(0, 255, 34);
+}
+
+.login>input, .register>input {
+  animation: input-entry 3s ease-in-out;
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 75%;
+  height: 50px;
+}
+
+@keyframes login-entry {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+  }
+  20% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: 5px solid rgb(53, 212, 74);
+  }
+  40% {
+    height: 240px;
+    width: 0;
+    opacity: 1;
+    padding: 0;
+    border: 5px solid rgb(53, 212, 74);
+  }
+  100% {
+    height: 240px;
+    width: 500px;
+    opacity: 1;
+    border: 5px solid rgb(53, 212, 74);
+  }
+}
+
+@keyframes register-entry {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+  }
+  20% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: 5px solid rgb(53, 212, 74);
+  }
+  40% {
+    height: 400px;
+    width: 0;
+    opacity: 1;
+    padding: 0;
+    border: 5px solid rgb(53, 212, 74);
+  }
+  100% {
+    height: 400px;
+    width: 600px;
+    opacity: 1;
+    border: 5px solid rgb(53, 212, 74);
+  }
+}
+
+@keyframes input-entry {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  color: white;
+  background-color: #333;
+  user-select: none;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 7%;
+  margin: 0px;
+  /* To align elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

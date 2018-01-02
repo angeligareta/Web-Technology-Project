@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Ultimate Calendar </title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ejemplo HTML, CSS, JavaScript">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Ángel Igareta">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/index-style.css"></link>
+</head>
+
+<body>
+  <header>
+    <div class="title-div">
+      <img class= "invert" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Calendar_font_awesome.svg/512px-Calendar_font_awesome.svg.png"
+      alt="Calendario" width="30" height="30"/>
+      <h1 class="page-title"> Ultimate Calendar </h1>
+    </div>
+    <ul class="navbar">
+      <div class="navbar-left">
+        <li> Inicio </li>
+      </div>
+      <div class="navbar-right">
+        <li> Servicios </li>
+        <li> Contacto </li>
+        <li> Ayuda y Soporte </li>
+      </div>
+    </ul>
+  </header>
+
+  <div class="content">
+    <div class="login-menu">
+      <h2 id="register" class="register-button"> Registrarse </h2>
+      <h2 id="login" class="login-button"> Iniciar Sesión </h2>
+
+      <form style="opacity: 0;" class="register" id="register-form" action="welcome.html" onsubmit="return validateRegisterForm()" method="get">
+          <input type="text" name="first-name" placeholder="Nombre" required/>
+          <input type="text" name="last-name" placeholder="Apellidos" required/>
+          <div class="course-selection">
+            <h4> Curso </h4>
+            <input type="radio" name="course" value="1º Curso"/> <label> 1º Curso </label>
+            <input type="radio" name="course" value="2º Curso"/> <label> 2º Curso </label>
+            <input type="radio" name="course" value="3º Curso"/> <label> 3º Curso </label>
+            <input type="radio" name="course" value="4º Curso"/> <label> 4º Curso </label>
+          </div>
+          <input type="email" name="email" placeholder="Email" required/>
+          <input type="password" name="password" placeholder="Contraseña" required/>
+          <input type="submit" value="Registrarse" />
+      </form>
+
+      <form style="opacity: 0;" id="login-form" action="welcome.html" onsubmit="return validateLoginForm()" method="get">
+          <input type="email" name="email" placeholder="Email" required/>
+          <input type="password" name="password" placeholder="Contraseña" required/>
+          <input type="submit" name="enter" value="Entrar" />
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <h4>Copyright © 2017 Ángel Igareta - Todos los derechos reservados </h4>
+  </footer>
+  <script type="text/javascript" src=../JS/scripts.js></script>
+</body>
+
+</html>
